@@ -1,0 +1,84 @@
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 8px;
+    background-color: #1e1e1e; /* Darker board background */
+    padding: 15px; /* Padding around the board */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.board:hover {
+    transform: scale(1.02);
+}
+
+/* Winning lines */
+.winning-line {
+    position: absolute;
+    background-color: red;
+    z-index: 1;
+}
+
+/* Horizontal lines */
+.row-0 {
+    width: 310px;
+    height: 4px;
+    top: 52px; /* Center of first row */
+    left: 5px;
+}
+
+.row-1 {
+    width: 310px;
+    height: 4px;
+    top: 157px; /* Center of second row */
+    left: 5px;
+}
+
+.row-2 {
+    width: 310px;
+    height: 4px;
+    top: 262px; /* Center of third row */
+    left: 5px;
+}
+
+/* Vertical lines */
+.col-0 {
+    width: 4px;
+    height: 310px;
+    top: 5px;
+    left: 52px; /* Center of first column */
+}
+
+.col-1 {
+    width: 4px;
+    height: 310px;
+    top: 5px;
+    left: 157px; /* Center of second column */
+}
+
+.col-2 {
+    width: 4px;
+    height: 310px;
+    top: 5px;
+    left: 262px; /* Center of third column */
+}
+
+/* Diagonal lines */
+.diag-1 {
+    width: 420px;
+    height: 4px;
+    top: 5px;
+    left: 5px;
+    transform: rotate(45deg);
+    transform-origin: top left;
+}
+
+.diag-2 {
+    width: 420px;
+    height: 4px;
+    top: 5px;
+    left: 315px;
+    transform: rotate(-45deg);
+    transform-origin: top left;
+}
